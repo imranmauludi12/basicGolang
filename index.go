@@ -23,9 +23,19 @@ func main()  {
 		fmt.Printf("%s tidak lulus, kurang %d dari batas remedial \n", namaSiswa, SelisihRemedial(nilaiSiswa, batasNilaiRemedial))
 	}
 
+	var murid1 Murid
+	murid1 = Murid{"imran", 20, 80}
+
 	// FizzBuzz(arrayNumber[:])
 	// FizzBuzz(arr2[:])
 	CekBilanganGenap(arr3[:])
+	CheckSiswa(murid1)
+}
+
+type Murid struct {
+	nama string
+	umur int
+	nilai int
 }
 
 func FizzBuzz(n []int) {
@@ -50,4 +60,8 @@ func CekBilanganGenap(arr []int) {
 
 func SelisihRemedial(nilai int, batasRemedial int) int {
 	return batasRemedial - nilai
+}
+
+func CheckSiswa(murid Murid) {
+	fmt.Println(murid.nama)
 }
